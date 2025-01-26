@@ -1,0 +1,57 @@
+# Java Link Shortener Project
+
+## Project Overview
+A Java-based Link Shortener application that generates short, unique URLs from long web addresses.
+
+## Features
+- Generate unique short URLs
+- Expand short URLs back to original long URLs
+- In-memory URL mapping
+- Basic collision handling
+- Simple command-line interface
+
+## Requirements
+- Java 11 or higher
+- Maven for dependency management
+
+## Setup and Installation
+1. Clone the repository
+2. Ensure Java and Maven are installed
+3. Run `mvn clean install`
+4. Execute the application with `java -jar target/link-shortener.jar`
+
+## Project Structure
+```
+link-shortener/
+│
+├── src/
+│   ├── main/
+│   │   └── java/
+│   │       └── com/
+│   │           └── linkshortener/
+│   │               ├── LinkShortener.java
+│   │               └── URLValidator.java
+│   │
+│   └── test/
+│       └── java/
+│           └── com/
+│               └── linkshortener/
+│                   └── LinkShortenerTest.java
+│
+├── pom.xml
+└── README.md
+```
+
+## Usage Examples
+```java
+LinkShortener shortener = new LinkShortener();
+String longURL = "https://www.example.com/very/long/url";
+String shortURL = shortener.shortenURL(longURL);
+String originalURL = shortener.expandURL(shortURL);
+```
+
+## Future Enhancements
+- Database persistence
+- Web interface
+- Advanced URL validation
+```
